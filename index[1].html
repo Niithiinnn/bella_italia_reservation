@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Reserve a Table - Bella Italia Restaurant</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="reservation-container">
+    <div class="header">
+      <h1>🍝 Bella Italia</h1>
+      <p>Reserve Your Table Today</p>
+    </div>
+
+    <div class="divider"></div>
+
+    <form id="reservationForm">
+      <div class="form-row">
+        <div class="form-group">
+          <label for="firstName">First Name <span class="required">*</span></label>
+          <input type="text" id="firstName" name="firstName" placeholder="John" required />
+        </div>
+        <div class="form-group">
+          <label for="lastName">Last Name <span class="required">*</span></label>
+          <input type="text" id="lastName" name="lastName" placeholder="Doe" required />
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label for="email">Email <span class="required">*</span></label>
+          <input type="email" id="email" name="email" placeholder="john@example.com" required />
+        </div>
+        <div class="form-group">
+          <label for="phone">Phone <span class="required">*</span></label>
+          <input type="tel" id="phone" name="phone" placeholder="(555) 123-4567" required />
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label for="date">Date <span class="required">*</span></label>
+          <input type="date" id="date" name="date" required />
+        </div>
+        <div class="form-group">
+          <label for="guests">Number of Guests <span class="required">*</span></label>
+          <select id="guests" name="guests" required>
+            <option value="">Select...</option>
+            <option value="1">1 Guest</option>
+            <option value="2">2 Guests</option>
+            <option value="3">3 Guests</option>
+            <option value="4">4 Guests</option>
+            <option value="5">5 Guests</option>
+            <option value="6">6 Guests</option>
+            <option value="7+">7+ Guests</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="form-group full-width">
+        <label>Preferred Time <span class="required">*</span></label>
+        <div class="time-slots">
+          <div class="time-slot" data-time="17:00">5:00 PM</div>
+          <div class="time-slot" data-time="17:30">5:30 PM</div>
+          <div class="time-slot" data-time="18:00">6:00 PM</div>
+          <div class="time-slot" data-time="18:30">6:30 PM</div>
+          <div class="time-slot" data-time="19:00">7:00 PM</div>
+          <div class="time-slot" data-time="19:30">7:30 PM</div>
+          <div class="time-slot" data-time="20:00">8:00 PM</div>
+          <div class="time-slot" data-time="20:30">8:30 PM</div>
+          <div class="time-slot" data-time="21:00">9:00 PM</div>
+        </div>
+        <input type="hidden" id="timeSlot" name="timeSlot" required />
+      </div>
+
+      <div class="form-group full-width">
+        <label for="occasion">Special Occasion</label>
+        <select id="occasion" name="occasion">
+          <option value="">None</option>
+          <option value="birthday">Birthday</option>
+          <option value="anniversary">Anniversary</option>
+          <option value="business">Business Dinner</option>
+          <option value="other">Other Celebration</option>
+        </select>
+      </div>
+
+      <div class="form-group full-width">
+        <label for="requests">Special Requests</label>
+        <textarea
+          id="requests"
+          name="requests"
+          placeholder="Any dietary restrictions, seating preferences, or special requests..."
+        ></textarea>
+      </div>
+
+      <button type="submit" class="btn-reserve">🍽️ Reserve Table</button>
+
+      <div class="info-box">
+        <p>
+          <strong>Note:</strong> Reservations are held for 15 minutes past the booking time.
+          Please call us at (555) 123-4567 if you're running late.
+        </p>
+      </div>
+    </form>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
